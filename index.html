@@ -3,12 +3,554 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Azotea Chica</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Azotea Chica — Estancia 1865, Provincia de Buenos Aires</title>
+  <meta name="description" content="47 hectáreas a 2 horas de CABA. Estancia histórica fundada en 1865, Provincia de Buenos Aires. Venta total o por lotes.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
-  <!-- content goes here -->
+  <!-- ======= NAV ======= -->
+  <nav id="nav" role="navigation">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">Azotea Chica</a>
+      <button class="nav-toggle" aria-label="Menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-menu" role="list">
+        <li><a href="#propiedad" data-i18n="nav_propiedad">La Propiedad</a></li>
+        <li><a href="#lotes" data-i18n="nav_lotes">Lotes</a></li>
+        <li><a href="#mapa" data-i18n="nav_mapa">Mapa</a></li>
+        <li><a href="#galeria" data-i18n="nav_galeria">Galería</a></li>
+        <li><a href="#contacto" data-i18n="nav_contacto">Contacto</a></li>
+        <li class="lang-item">
+          <button id="lang-btn" aria-label="Switch language">EN</button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ======= HERO ======= -->
+  <section id="hero">
+    <video autoplay muted loop playsinline id="hero-video" aria-hidden="true">
+      <source src="video/azotea.mp4" type="video/mp4">
+    </video>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow" data-i18n="hero_eyebrow">Provincia de Buenos Aires · 1865</p>
+      <h1 class="hero-title">Azotea Chica</h1>
+      <p class="hero-sub" data-i18n="hero_sub">Estancia histórica · 47 hectáreas · 2 horas de CABA</p>
+      <a href="#contacto" class="btn-cta" data-i18n="hero_cta">Consultar</a>
+    </div>
+    <a href="#propiedad" class="hero-scroll" aria-label="Ir a la propiedad">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </section>
+
+  <!-- ======= LA PROPIEDAD ======= -->
+  <section id="propiedad">
+    <div class="container">
+      <div class="propiedad-grid">
+        <div class="propiedad-text">
+          <span class="eyebrow" data-i18n="prop_eyebrow">La Propiedad</span>
+          <h2 data-i18n="prop_title">47 hectáreas de historia</h2>
+          <p data-i18n="prop_desc">Fundada en 1865, Azotea Chica es una de las estancias más auténticas de la Provincia de Buenos Aires. A tan solo dos horas de Capital Federal por Ruta Nacional 2, combina infraestructura ecuestre completa con una parquización centenaria única.</p>
+          <div class="prop-pills">
+            <span class="pill" data-i18n="pill_total">Venta total</span>
+            <span class="pill" data-i18n="pill_lotes">Por lotes</span>
+            <span class="pill" data-i18n="pill_escritura">Escritura disponible</span>
+          </div>
+          <div class="prop-stats">
+            <div class="stat">
+              <span class="stat-num">47</span>
+              <span class="stat-label" data-i18n="stat_ha">Hectáreas</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">1865</span>
+              <span class="stat-label" data-i18n="stat_year">Fundación</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">2 hs</span>
+              <span class="stat-label" data-i18n="stat_dist">de CABA</span>
+            </div>
+          </div>
+        </div>
+        <div class="propiedad-img">
+          <img src="images/IMG_0305.jpeg" alt="Casco principal de Azotea Chica — fachada colonial pampeano, 1865" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= LOTES ======= -->
+  <section id="lotes">
+    <div class="container">
+      <span class="eyebrow centered light" data-i18n="lotes_eyebrow">Subdivisión</span>
+      <h2 class="centered" data-i18n="lotes_title">Tres fracciones independientes</h2>
+      <div class="lotes-grid">
+
+        <div class="lote-card">
+          <div class="lote-header" style="--lote-color: #B8902A">
+            <div class="lote-header-top">
+              <span class="lote-badge">Lote A</span>
+              <span class="lote-sup">8 Ha 00 A</span>
+            </div>
+          </div>
+          <div class="lote-body">
+            <h3 data-i18n="loteA_title">Casco Principal</h3>
+            <p data-i18n="loteA_desc">Todas las edificaciones históricas, parquización centenaria, pileta y complejo ecuestre.</p>
+            <button class="lote-toggle" aria-expanded="false" data-key-open="lote_ver" data-key-close="lote_ocultar" data-i18n="lote_ver">Ver detalle</button>
+            <div class="lote-detail" hidden>
+              <ul>
+                <li data-i18n="loteA_ed1">Casa principal (casco) — estilo colonial pampeano, 1865</li>
+                <li data-i18n="loteA_ed2">Casa de huéspedes — a reparar</li>
+                <li data-i18n="loteA_ed3">Casa del casero — a reparar</li>
+                <li data-i18n="loteA_ed4">Galpón con 6 boxes para caballos</li>
+                <li data-i18n="loteA_ed5">Departamento cuida caballos</li>
+                <li data-i18n="loteA_ed6">Pileta 11 × 4 m</li>
+                <li data-i18n="loteA_ed7">Arboleda centenaria y jardín</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="lote-card">
+          <div class="lote-header" style="--lote-color: #2C4A2E">
+            <div class="lote-header-top">
+              <span class="lote-badge">Lote B</span>
+              <span class="lote-sup">8 Ha 34 A</span>
+            </div>
+          </div>
+          <div class="lote-body">
+            <h3 data-i18n="loteB_title">Frente Ruta Prov. 2</h3>
+            <p data-i18n="loteB_desc">Frente a la antigua Ruta Provincial N° 2. Ideal para desarrollo independiente o acceso vehicular directo.</p>
+            <button class="lote-toggle" aria-expanded="false" data-key-open="lote_ver" data-key-close="lote_ocultar" data-i18n="lote_ver">Ver detalle</button>
+            <div class="lote-detail" hidden>
+              <ul>
+                <li data-i18n="loteB_ed1">Frente a antigua Ruta Provincial Nº 2</li>
+                <li data-i18n="loteB_ed2">Acceso vehicular directo desde la ruta</li>
+                <li data-i18n="loteB_ed3">Superficie exacta: 8 Ha 34 A 60,17 Cas</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="lote-card">
+          <div class="lote-header" style="--lote-color: #8A6A3A">
+            <div class="lote-header-top">
+              <span class="lote-badge">Lote C</span>
+              <span class="lote-sup">31 Ha 48 A</span>
+            </div>
+          </div>
+          <div class="lote-body">
+            <h3 data-i18n="loteC_title">Campo para Siembra</h3>
+            <p data-i18n="loteC_desc">La fracción más grande. Tierra fértil apta para agricultura, ganadería o desarrollo de canchas de polo.</p>
+            <button class="lote-toggle" aria-expanded="false" data-key-open="lote_ver" data-key-close="lote_ocultar" data-i18n="lote_ver">Ver detalle</button>
+            <div class="lote-detail" hidden>
+              <ul>
+                <li data-i18n="loteC_ed1">Superficie exacta: 31 Ha 48 A 22,23 Cas</li>
+                <li data-i18n="loteC_ed2">Apto para siembra y ganadería</li>
+                <li data-i18n="loteC_ed3">Potencial para canchas de polo</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= FICHAS TÉCNICAS ======= -->
+  <section id="fichas">
+    <div class="container">
+      <span class="eyebrow centered" data-i18n="fichas_eyebrow">Lote A</span>
+      <h2 class="centered" data-i18n="fichas_title">Edificaciones</h2>
+      <div class="fichas-grid">
+
+        <div class="ficha-card">
+          <div class="ficha-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9.5L12 3l9 6.5V21H3V9.5z"/><rect x="9" y="13" width="6" height="8"/></svg>
+          </div>
+          <h4 data-i18n="ficha1_name">Casa Principal</h4>
+          <p class="ficha-desc" data-i18n="ficha1_desc">Estilo colonial pampeano. Fachada ocre y blanco. 1865 inscripto en el portal.</p>
+          <span class="ficha-estado estado-excelente" data-i18n="estado_excelente">Excelente estado</span>
+        </div>
+
+        <div class="ficha-card">
+          <div class="ficha-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9.5L12 3l9 6.5V21H3V9.5z"/><rect x="9" y="13" width="6" height="8"/></svg>
+          </div>
+          <h4 data-i18n="ficha2_name">Casa de Huéspedes</h4>
+          <p class="ficha-desc" data-i18n="ficha2_desc">Separada del casco principal. Gran potencial de restauración.</p>
+          <span class="ficha-estado estado-reparar" data-i18n="estado_reparar">A reparar</span>
+        </div>
+
+        <div class="ficha-card">
+          <div class="ficha-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9.5L12 3l9 6.5V21H3V9.5z"/><rect x="9" y="13" width="6" height="8"/></svg>
+          </div>
+          <h4 data-i18n="ficha3_name">Casa del Casero</h4>
+          <p class="ficha-desc" data-i18n="ficha3_desc">Vivienda para personal de campo.</p>
+          <span class="ficha-estado estado-reparar" data-i18n="estado_reparar">A reparar</span>
+        </div>
+
+        <div class="ficha-card">
+          <div class="ficha-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="8" width="20" height="13" rx="1"/><path d="M2 8l10-5 10 5"/><path d="M8 21V13h4v8M12 21V13h4v8"/></svg>
+          </div>
+          <h4 data-i18n="ficha4_name">Galpón / Caballerizas</h4>
+          <p class="ficha-desc" data-i18n="ficha4_desc">6 boxes para caballos. Infraestructura ecuestre completa para polo.</p>
+          <span class="ficha-estado estado-funcional" data-i18n="estado_funcional">Funcional</span>
+        </div>
+
+        <div class="ficha-card">
+          <div class="ficha-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9.5L12 3l9 6.5V21H3V9.5z"/><rect x="9" y="13" width="6" height="8"/></svg>
+          </div>
+          <h4 data-i18n="ficha5_name">Dpto. Cuida Caballos</h4>
+          <p class="ficha-desc" data-i18n="ficha5_desc">Vivienda para el encargado ecuestre, integrada al complejo.</p>
+          <span class="ficha-estado estado-funcional" data-i18n="estado_funcional">Funcional</span>
+        </div>
+
+        <div class="ficha-card">
+          <div class="ficha-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="10" width="18" height="10" rx="1"/><path d="M7 10V7a5 5 0 0110 0v3"/></svg>
+          </div>
+          <h4 data-i18n="ficha6_name">Pileta</h4>
+          <p class="ficha-desc" data-i18n="ficha6_desc">11 × 4 metros. Integrada al jardín del casco principal.</p>
+          <span class="ficha-estado estado-funcional" data-i18n="estado_funcional">Funcional</span>
+        </div>
+
+        <div class="ficha-card">
+          <div class="ficha-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg>
+          </div>
+          <h4 data-i18n="ficha7_name">Parquización</h4>
+          <p class="ficha-desc" data-i18n="ficha7_desc">Arboleda centenaria, jardín único. Grandes espacios verdes excepcionales.</p>
+          <span class="ficha-estado estado-excelente" data-i18n="estado_excelente">Excelente estado</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= MAPA ======= -->
+  <section id="mapa">
+    <div class="container">
+      <span class="eyebrow centered" data-i18n="mapa_eyebrow">Ubicación</span>
+      <h2 class="centered" data-i18n="mapa_title">Provincia de Buenos Aires</h2>
+      <div class="mapa-distancias">
+        <span data-i18n="mapa_caba">CABA: ~2 hs por Ruta 2</span>
+        <span data-i18n="mapa_aeropuerto">Aeropuerto Ezeiza: ~2 hs</span>
+      </div>
+      <div id="map" role="application" aria-label="Mapa de ubicación de Azotea Chica"></div>
+    </div>
+  </section>
+
+  <!-- ======= GALERÍA ======= -->
+  <section id="galeria">
+    <div class="container">
+      <span class="eyebrow centered light" data-i18n="gal_eyebrow">Galería</span>
+      <h2 class="centered" data-i18n="gal_title">La estancia en imágenes</h2>
+      <div class="gallery-filters" role="group" aria-label="Filtrar galería">
+        <button class="filter-btn active" data-filter="all" data-i18n="gal_all">Todos</button>
+        <button class="filter-btn" data-filter="casco" data-i18n="gal_casco">Casco</button>
+        <button class="filter-btn" data-filter="exterior" data-i18n="gal_exterior">Parquización</button>
+        <button class="filter-btn" data-filter="establos" data-i18n="gal_establos">Establos</button>
+        <button class="filter-btn" data-filter="campo" data-i18n="gal_campo">Campo</button>
+      </div>
+      <div class="gallery-grid" id="gallery-grid">
+
+        <!-- CASCO -->
+        <a href="images/IMG_0305.jpeg" class="gallery-item" data-category="casco"
+           data-glightbox="title: Casco principal — 1865; description: Fachada colonial pampeano">
+          <img src="images/IMG_0305.jpeg" alt="Casco principal 1865" loading="lazy">
+        </a>
+        <a href="images/IMG_3461.jpeg" class="gallery-item" data-category="casco"
+           data-glightbox="title: Casco principal; description: Vista lateral con palmera centenaria">
+          <img src="images/IMG_3461.jpeg" alt="Casco — vista lateral" loading="lazy">
+        </a>
+        <a href="images/IMG_0339.jpeg" class="gallery-item" data-category="casco"
+           data-glightbox="title: Casco principal">
+          <img src="images/IMG_0339.jpeg" alt="Casco principal" loading="lazy">
+        </a>
+        <a href="images/IMG_0351.jpeg" class="gallery-item" data-category="casco"
+           data-glightbox="title: Casco principal">
+          <img src="images/IMG_0351.jpeg" alt="Casco principal" loading="lazy">
+        </a>
+        <a href="images/IMG_0352.jpeg" class="gallery-item" data-category="casco"
+           data-glightbox="title: Casco principal">
+          <img src="images/IMG_0352.jpeg" alt="Casco principal" loading="lazy">
+        </a>
+        <a href="images/IMG_3463.jpeg" class="gallery-item" data-category="casco"
+           data-glightbox="title: Casco">
+          <img src="images/IMG_3463.jpeg" alt="Casco" loading="lazy">
+        </a>
+        <a href="images/IMG_1816.jpeg" class="gallery-item" data-category="casco"
+           data-glightbox="title: Casco">
+          <img src="images/IMG_1816.jpeg" alt="Casco" loading="lazy">
+        </a>
+        <a href="images/IMG_1821.jpeg" class="gallery-item" data-category="casco"
+           data-glightbox="title: Casco">
+          <img src="images/IMG_1821.jpeg" alt="Casco" loading="lazy">
+        </a>
+
+        <!-- PARQUIZACIÓN / EXTERIOR -->
+        <a href="images/IMG_1770.jpeg" class="gallery-item" data-category="exterior"
+           data-glightbox="title: Parquización centenaria">
+          <img src="images/IMG_1770.jpeg" alt="Parquización — arboleda centenaria" loading="lazy">
+        </a>
+        <a href="images/IMG_1774.jpeg" class="gallery-item" data-category="exterior"
+           data-glightbox="title: Jardín">
+          <img src="images/IMG_1774.jpeg" alt="Jardín" loading="lazy">
+        </a>
+        <a href="images/IMG_1775.jpeg" class="gallery-item" data-category="exterior"
+           data-glightbox="title: Jardín">
+          <img src="images/IMG_1775.jpeg" alt="Jardín" loading="lazy">
+        </a>
+        <a href="images/IMG_1776.jpeg" class="gallery-item" data-category="exterior"
+           data-glightbox="title: Jardín">
+          <img src="images/IMG_1776.jpeg" alt="Jardín" loading="lazy">
+        </a>
+        <a href="images/IMG_2005.jpeg" class="gallery-item" data-category="exterior"
+           data-glightbox="title: Exterior">
+          <img src="images/IMG_2005.jpeg" alt="Exterior" loading="lazy">
+        </a>
+        <a href="images/IMG_2087.jpeg" class="gallery-item" data-category="exterior"
+           data-glightbox="title: Exterior">
+          <img src="images/IMG_2087.jpeg" alt="Exterior" loading="lazy">
+        </a>
+        <a href="images/IMG_2095.jpeg" class="gallery-item" data-category="exterior"
+           data-glightbox="title: Exterior">
+          <img src="images/IMG_2095.jpeg" alt="Exterior" loading="lazy">
+        </a>
+        <a href="images/IMG_2100.jpeg" class="gallery-item" data-category="exterior"
+           data-glightbox="title: Exterior">
+          <img src="images/IMG_2100.jpeg" alt="Exterior" loading="lazy">
+        </a>
+        <a href="images/IMG_2572.jpeg" class="gallery-item" data-category="exterior"
+           data-glightbox="title: Exterior">
+          <img src="images/IMG_2572.jpeg" alt="Exterior" loading="lazy">
+        </a>
+        <a href="images/IMG_2573.jpeg" class="gallery-item" data-category="exterior"
+           data-glightbox="title: Exterior">
+          <img src="images/IMG_2573.jpeg" alt="Exterior" loading="lazy">
+        </a>
+
+        <!-- ESTABLOS / TRANQUERA -->
+        <a href="images/IMG_2401.jpeg" class="gallery-item" data-category="establos"
+           data-glightbox="title: Tranquera — Azotea Chica; description: Portal de entrada a la estancia">
+          <img src="images/IMG_2401.jpeg" alt="Tranquera de entrada — Azotea Chica" loading="lazy">
+        </a>
+        <a href="images/IMG_2402.jpeg" class="gallery-item" data-category="establos"
+           data-glightbox="title: Establos">
+          <img src="images/IMG_2402.jpeg" alt="Establos" loading="lazy">
+        </a>
+        <a href="images/IMG_2404.jpeg" class="gallery-item" data-category="establos"
+           data-glightbox="title: Establos">
+          <img src="images/IMG_2404.jpeg" alt="Establos" loading="lazy">
+        </a>
+        <a href="images/IMG_2410.jpeg" class="gallery-item" data-category="establos"
+           data-glightbox="title: Establos">
+          <img src="images/IMG_2410.jpeg" alt="Establos" loading="lazy">
+        </a>
+        <a href="images/IMG_2412.jpeg" class="gallery-item" data-category="establos"
+           data-glightbox="title: Establos">
+          <img src="images/IMG_2412.jpeg" alt="Establos" loading="lazy">
+        </a>
+        <a href="images/IMG_2564.jpeg" class="gallery-item" data-category="establos"
+           data-glightbox="title: Complejo ecuestre">
+          <img src="images/IMG_2564.jpeg" alt="Complejo ecuestre" loading="lazy">
+        </a>
+        <a href="images/IMG_2565.jpeg" class="gallery-item" data-category="establos"
+           data-glightbox="title: Complejo ecuestre">
+          <img src="images/IMG_2565.jpeg" alt="Complejo ecuestre" loading="lazy">
+        </a>
+        <a href="images/IMG_1400.jpeg" class="gallery-item" data-category="establos"
+           data-glightbox="title: Establos">
+          <img src="images/IMG_1400.jpeg" alt="Establos" loading="lazy">
+        </a>
+        <a href="images/IMG_1401.jpeg" class="gallery-item" data-category="establos"
+           data-glightbox="title: Establos">
+          <img src="images/IMG_1401.jpeg" alt="Establos" loading="lazy">
+        </a>
+        <a href="images/IMG_1402.jpeg" class="gallery-item" data-category="establos"
+           data-glightbox="title: Establos">
+          <img src="images/IMG_1402.jpeg" alt="Establos" loading="lazy">
+        </a>
+
+        <!-- CAMPO -->
+        <a href="images/IMG_3439.jpeg" class="gallery-item" data-category="campo"
+           data-glightbox="title: Campo — Lote C">
+          <img src="images/IMG_3439.jpeg" alt="Campo" loading="lazy">
+        </a>
+        <a href="images/IMG_3441.jpeg" class="gallery-item" data-category="campo"
+           data-glightbox="title: Campo">
+          <img src="images/IMG_3441.jpeg" alt="Campo" loading="lazy">
+        </a>
+        <a href="images/IMG_3443.jpeg" class="gallery-item" data-category="campo"
+           data-glightbox="title: Campo">
+          <img src="images/IMG_3443.jpeg" alt="Campo" loading="lazy">
+        </a>
+        <a href="images/IMG_3517.jpeg" class="gallery-item" data-category="campo"
+           data-glightbox="title: Campo">
+          <img src="images/IMG_3517.jpeg" alt="Campo" loading="lazy">
+        </a>
+        <a href="images/IMG_3522.jpeg" class="gallery-item" data-category="campo"
+           data-glightbox="title: Campo">
+          <img src="images/IMG_3522.jpeg" alt="Campo" loading="lazy">
+        </a>
+        <a href="images/IMG_3523.jpeg" class="gallery-item" data-category="campo"
+           data-glightbox="title: Campo">
+          <img src="images/IMG_3523.jpeg" alt="Campo" loading="lazy">
+        </a>
+        <a href="images/IMG_3529.jpeg" class="gallery-item" data-category="campo"
+           data-glightbox="title: Campo">
+          <img src="images/IMG_3529.jpeg" alt="Campo" loading="lazy">
+        </a>
+        <a href="images/IMG_3542.jpeg" class="gallery-item" data-category="campo"
+           data-glightbox="title: Campo">
+          <img src="images/IMG_3542.jpeg" alt="Campo" loading="lazy">
+        </a>
+        <a href="images/IMG_3544.jpeg" class="gallery-item" data-category="campo"
+           data-glightbox="title: Campo">
+          <img src="images/IMG_3544.jpeg" alt="Campo" loading="lazy">
+        </a>
+        <a href="images/IMG_3547.jpeg" class="gallery-item" data-category="campo"
+           data-glightbox="title: Campo">
+          <img src="images/IMG_3547.jpeg" alt="Campo" loading="lazy">
+        </a>
+        <a href="images/IMG_3552.jpeg" class="gallery-item" data-category="campo"
+           data-glightbox="title: Campo">
+          <img src="images/IMG_3552.jpeg" alt="Campo" loading="lazy">
+        </a>
+        <a href="images/IMG_3600.jpeg" class="gallery-item" data-category="campo"
+           data-glightbox="title: Campo — vista aérea">
+          <img src="images/IMG_3600.jpeg" alt="Campo — vista aérea" loading="lazy">
+        </a>
+        <a href="images/IMG_3649.jpeg" class="gallery-item" data-category="campo"
+           data-glightbox="title: Campo">
+          <img src="images/IMG_3649.jpeg" alt="Campo" loading="lazy">
+        </a>
+        <a href="images/IMG_4574.jpeg" class="gallery-item" data-category="campo"
+           data-glightbox="title: Campo">
+          <img src="images/IMG_4574.jpeg" alt="Campo" loading="lazy">
+        </a>
+        <a href="images/IMG_4576.jpeg" class="gallery-item" data-category="campo"
+           data-glightbox="title: Campo">
+          <img src="images/IMG_4576.jpeg" alt="Campo" loading="lazy">
+        </a>
+        <a href="images/IMG_4579.jpeg" class="gallery-item" data-category="campo"
+           data-glightbox="title: Campo">
+          <img src="images/IMG_4579.jpeg" alt="Campo" loading="lazy">
+        </a>
+        <a href="images/IMG_4615.jpeg" class="gallery-item" data-category="campo"
+           data-glightbox="title: Campo">
+          <img src="images/IMG_4615.jpeg" alt="Campo" loading="lazy">
+        </a>
+        <a href="images/IMG_4616.jpeg" class="gallery-item" data-category="campo"
+           data-glightbox="title: Campo">
+          <img src="images/IMG_4616.jpeg" alt="Campo" loading="lazy">
+        </a>
+        <a href="images/IMG_4617.jpeg" class="gallery-item" data-category="campo"
+           data-glightbox="title: Campo">
+          <img src="images/IMG_4617.jpeg" alt="Campo" loading="lazy">
+        </a>
+        <a href="images/IMG_4618.jpeg" class="gallery-item" data-category="campo"
+           data-glightbox="title: Campo">
+          <img src="images/IMG_4618.jpeg" alt="Campo" loading="lazy">
+        </a>
+        <a href="images/IMG_4620.jpeg" class="gallery-item" data-category="campo"
+           data-glightbox="title: Campo">
+          <img src="images/IMG_4620.jpeg" alt="Campo" loading="lazy">
+        </a>
+        <a href="images/IMG_4621.jpeg" class="gallery-item" data-category="campo"
+           data-glightbox="title: Campo">
+          <img src="images/IMG_4621.jpeg" alt="Campo" loading="lazy">
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= CONTACTO ======= -->
+  <section id="contacto">
+    <div class="container">
+      <span class="eyebrow centered" data-i18n="contact_eyebrow">Contacto</span>
+      <h2 class="centered" data-i18n="contact_title">Consultar sobre la propiedad</h2>
+      <div class="contact-grid">
+        <form class="contact-form" id="contact-form" action="https://formspree.io/f/XXXXXXXX" method="POST">
+          <div class="form-group">
+            <label for="nombre" data-i18n="form_nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" autocomplete="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="email" required>
+          </div>
+          <div class="form-group">
+            <label for="telefono" data-i18n="form_tel">Teléfono</label>
+            <input type="tel" id="telefono" name="telefono" autocomplete="tel">
+          </div>
+          <div class="form-group">
+            <label for="mensaje" data-i18n="form_msg">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="4" placeholder=""></textarea>
+          </div>
+          <button type="submit" class="btn-submit" data-i18n="form_send">Enviar consulta</button>
+          <p class="form-notice" id="form-notice" hidden data-i18n="form_ok">Mensaje enviado. Nos pondremos en contacto a la brevedad.</p>
+        </form>
+        <div class="contact-info">
+          <div class="contact-detail">
+            <strong data-i18n="contact_phone">Teléfono</strong>
+            <a href="tel:+COMPLETAR"><!-- completar --></a>
+          </div>
+          <div class="contact-detail">
+            <strong>Email</strong>
+            <a href="mailto:COMPLETAR@dominio.com"><!-- completar --></a>
+          </div>
+          <div class="contact-detail">
+            <strong>WhatsApp</strong>
+            <a href="https://wa.me/COMPLETAR" target="_blank" rel="noopener" class="wa-link" data-i18n="contact_wa">Escribir por WhatsApp</a>
+          </div>
+          <div class="contact-ubicacion">
+            <strong data-i18n="contact_ubicacion">Ubicación</strong>
+            <p data-i18n="contact_ubicacion_desc">Provincia de Buenos Aires · Ruta Nacional 2 · ~2 hs de CABA</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= FOOTER ======= -->
+  <footer id="footer">
+    <div class="footer-inner container">
+      <p class="footer-logo">Azotea Chica</p>
+      <p class="footer-sub">1865 · Provincia de Buenos Aires</p>
+      <p class="footer-legal" data-i18n="footer_legal">Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- WhatsApp flotante -->
+  <a href="https://wa.me/COMPLETAR" class="wa-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/map.js"></script>
+  <script src="js/gallery.js"></script>
+  <script src="js/main.js"></script>
 
 </body>
 </html>
