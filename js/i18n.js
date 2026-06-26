@@ -20,6 +20,20 @@ const translations = {
     stat_year: "Fundación",
     stat_dist: "de CABA",
 
+    nav_historia: "Historia",
+
+    hist_eyebrow: "Historia",
+    hist_title: "Más de 150 años de pampa",
+    hist_p1: "Fundada a mediados del 1800 por Don Pedro Ruiz, Azotea Chica es un testimonio vivo de la historia de la pampa bonaerense. Estas tierras, situadas en el corazón del actual Partido de Lezama, fueron el escenario donde este pionero decidió levantar un refugio de ladrillos y sueños en una época donde el horizonte era la única frontera.",
+    hist_p2: "Mientras que la vecina Azotea Grande servía al viajero y al comercio, La Azotea Chica nació como el rincón de mayor intimidad y resguardo familiar, conservando hasta hoy ese espíritu de hogar y serenidad.",
+    hist_p3: "Pedro Ruiz fue uno de los hacendados que se establecieron en la zona de las \"Lomas de Lezama\" a mediados del siglo XIX. En aquel entonces, tener una propiedad con \"azotea\" —techo plano de material— era un símbolo de estatus y poder, pero por sobre todo de seguridad.",
+    hist_p4: "La construcción original buscaba altura para vigilar el ganado y protegerse de posibles malones, ya que la zona estaba cerca de la frontera Sur que proponía El Salado, límite natural con el indio.",
+    hist_p5: "Desde sus gruesas paredes de barro y ladrillo, este lugar fue testigo del nacimiento del Partido de Biedma y del paso de aquellos que forjaron la identidad nacional. A través de las décadas, la estancia ha sabido transformarse sin perder su esencia, manteniendo sus puertas abiertas a la comunidad y a la historia.",
+    hist_quote: "\"Bienvenidos a La Azotea Chica, desde donde hace 150 años se vigilaba el horizonte y hoy se disfruta de las estrellas.\"",
+    hist_dato1: "Fundación original",
+    hist_dato2: "Construcción del casco actual",
+    hist_dato3: "Partido de Lezama, Pcia. de Buenos Aires",
+
     lotes_eyebrow: "Subdivisión",
     lotes_title: "Tres fracciones independientes",
     lote_ver: "Ver detalle",
@@ -112,6 +126,20 @@ const translations = {
     stat_ha: "Hectares",
     stat_year: "Founded",
     stat_dist: "from Buenos Aires",
+
+    nav_historia: "History",
+
+    hist_eyebrow: "History",
+    hist_title: "Over 150 years of pampa",
+    hist_p1: "Founded in the mid-1800s by Don Pedro Ruiz, Azotea Chica stands as a living testament to the history of the Buenos Aires pampa. These lands, situated in the heart of the Partido de Lezama, were the stage where this pioneer chose to build a refuge of bricks and dreams, at a time when the horizon was the only frontier.",
+    hist_p2: "While the neighboring Azotea Grande served travelers and commerce, Azotea Chica was born as a place of greater intimacy and family shelter — a spirit of home and serenity it preserves to this day.",
+    hist_p3: "Pedro Ruiz was one of the landowners who settled in the \"Lomas de Lezama\" area in the mid-19th century. At that time, owning a property with an \"azotea\" — a flat tiled roof — was a symbol of status and power, but above all, of security.",
+    hist_p4: "The original construction sought height to watch over the cattle and defend against possible raids, as the area lay close to the southern frontier marked by the Salado River.",
+    hist_p5: "From its thick mud-brick walls, this place witnessed the birth of the Partido de Biedma and the passage of those who shaped the national identity. Through the decades, the estate has transformed without losing its essence, keeping its doors open to the community and to history.",
+    hist_quote: "\"Welcome to Azotea Chica, where 150 years ago the horizon was watched, and today the stars are enjoyed.\"",
+    hist_dato1: "Original founding",
+    hist_dato2: "Current main house built",
+    hist_dato3: "Partido de Lezama, Buenos Aires Province",
 
     lotes_eyebrow: "Subdivision",
     lotes_title: "Three independent parcels",

@@ -411,6 +411,86 @@ h4 {
 
 
 /* ================================================
+   HISTORIA
+   ================================================ */
+
+#historia {
+  padding: var(--section-v) 0;
+  background: var(--negro);
+  color: var(--blanco);
+}
+
+#historia h2 {
+  color: var(--blanco);
+  margin-bottom: 52px;
+}
+
+.historia-grid {
+  display: grid;
+  gap: 52px;
+  align-items: start;
+}
+
+@media (min-width: 900px) {
+  .historia-grid {
+    grid-template-columns: 3fr 2fr;
+    gap: 80px;
+  }
+}
+
+.historia-texto p {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 1rem;
+  line-height: 1.85;
+  margin-bottom: 20px;
+}
+
+.historia-texto p:last-child { margin-bottom: 0; }
+
+.historia-aside {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.historia-quote {
+  border-left: 3px solid var(--ocre);
+  padding-left: 22px;
+  margin: 0;
+}
+
+.historia-quote p {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.historia-dato {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.historia-dato-num {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--ocre);
+  line-height: 1;
+}
+
+.historia-dato-label {
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.45);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* ================================================
    LOTES
    ================================================ */
 
