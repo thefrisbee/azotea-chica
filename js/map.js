@@ -1,6 +1,4 @@
-// Placeholder center — reemplazar con coordenadas GPS reales de la propiedad
-// Zona estimada: entre Chascomús y Dolores, Ruta 2, Pcia. de Buenos Aires
-const propiedadCenter = [-36.32, -57.80];
+const propiedadCenter = [-35.9092971, -57.9107521];
 
 const map = L.map('map', {
   center: propiedadCenter,
