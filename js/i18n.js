@@ -6,7 +6,7 @@ const translations = {
     nav_galeria: "Galería",
     nav_contacto: "Contacto",
 
-    hero_eyebrow: "Provincia de Buenos Aires · 1865",
+    hero_eyebrow: "Lezama, Provincia de Buenos Aires · 1865",
     hero_sub: "Estancia histórica · 47 hectáreas · 2 horas de CABA",
     hero_cta: "Consultar",
 
@@ -79,7 +79,7 @@ const translations = {
     estado_funcional: "Funcional",
 
     mapa_eyebrow: "Ubicación",
-    mapa_title: "Provincia de Buenos Aires",
+    mapa_title: "Lezama, Provincia de Buenos Aires",
     mapa_caba: "CABA: ~2 hs por Ruta 2",
     mapa_aeropuerto: "Aeropuerto Ezeiza: ~2 hs 30 m",
 
@@ -113,7 +113,7 @@ const translations = {
     nav_galeria: "Gallery",
     nav_contacto: "Contact",
 
-    hero_eyebrow: "Buenos Aires Province · 1865",
+    hero_eyebrow: "Lezama, Buenos Aires Province · 1865",
     hero_sub: "Historic ranch · 47 hectares · 2 hours from Buenos Aires",
     hero_cta: "Inquire",
 
@@ -186,7 +186,7 @@ const translations = {
     estado_funcional: "Functional",
 
     mapa_eyebrow: "Location",
-    mapa_title: "Buenos Aires Province",
+    mapa_title: "Lezama, Buenos Aires Province",
     mapa_caba: "Buenos Aires city: ~2 hrs via Route 2",
     mapa_aeropuerto: "Ezeiza Airport: ~2 hrs 30 m",
 
