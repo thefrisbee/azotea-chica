@@ -78,6 +78,9 @@ const translations = {
     estado_reparar: "A reparar",
     estado_funcional: "Funcional",
 
+    plano_eyebrow: "Casco Principal",
+    plano_title: "Plano de la casa",
+
     mapa_eyebrow: "Ubicación",
     mapa_title: "Lezama, Provincia de Buenos Aires",
     mapa_caba: "CABA: ~2 hs por Ruta 2",
@@ -87,9 +90,13 @@ const translations = {
     gal_title: "La estancia en imágenes",
     gal_all: "Todos",
     gal_casco: "Casco",
+    gal_interior: "Interior",
+    gal_huespedes: "Casa Huéspedes",
     gal_exterior: "Parquización",
+    gal_pileta: "Pileta",
     gal_establos: "Establos",
     gal_campo: "Campo",
+    gal_rio: "Río Salado",
 
     contact_eyebrow: "Contacto",
     contact_title: "Consultar sobre la propiedad",
@@ -185,6 +192,9 @@ const translations = {
     estado_reparar: "Needs renovation",
     estado_funcional: "Functional",
 
+    plano_eyebrow: "Main House",
+    plano_title: "Floor Plan",
+
     mapa_eyebrow: "Location",
     mapa_title: "Lezama, Buenos Aires Province",
     mapa_caba: "Buenos Aires city: ~2 hrs via Route 2",
@@ -194,9 +204,13 @@ const translations = {
     gal_title: "The estate in images",
     gal_all: "All",
     gal_casco: "Main House",
+    gal_interior: "Interior",
+    gal_huespedes: "Guest House",
     gal_exterior: "Parkland",
+    gal_pileta: "Pool",
     gal_establos: "Stables",
     gal_campo: "Farmland",
+    gal_rio: "Río Salado",
 
     contact_eyebrow: "Contact",
     contact_title: "Inquire about the property",

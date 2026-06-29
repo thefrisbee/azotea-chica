@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     selector: '.gallery-item',
     touchNavigation: true,
     loop: true,
-    autoplayVideos: false
+    autoplayVideos: true
   });
 
   const filterBtns = document.querySelectorAll('.filter-btn');
