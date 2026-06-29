@@ -654,6 +654,8 @@ h4 {
 }
 
 .estado-excelente { background: #E6F4EA; color: #1E6830; }
+.estado-bueno     { background: #EAF4E6; color: #2E6B1A; }
+.estado-reciclar  { background: #F0EAF8; color: #5B2D8E; }
 .estado-reparar   { background: #FEF3E2; color: #9A4700; }
 .estado-funcional { background: #E8F0FE; color: #1A56A0; }
 

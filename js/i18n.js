@@ -75,6 +75,8 @@ const translations = {
     ficha7_name: "Parquización",
     ficha7_desc: "Arboleda centenaria, jardín único. Grandes espacios verdes excepcionales. Riego por aspersión. 20 variedades de frutales. Fauna autóctona.",
     estado_excelente: "Excelente estado",
+    estado_bueno: "Buen estado",
+    estado_reciclar: "A reciclar",
     estado_reparar: "A reparar",
     estado_funcional: "Funcional",
 
@@ -189,6 +191,8 @@ const translations = {
     ficha7_name: "Parkland",
     ficha7_desc: "Centennial trees and unique gardens. Exceptional green spaces.",
     estado_excelente: "Excellent condition",
+    estado_bueno: "Good condition",
+    estado_reciclar: "To be recycled",
     estado_reparar: "Needs renovation",
     estado_funcional: "Functional",
 
