@@ -490,6 +490,17 @@ h4 {
   letter-spacing: 0.08em;
 }
 
+.historia-img-full {
+  margin-top: 52px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.historia-img-full img {
+  width: 100%;
+  display: block;
+}
+
 /* ================================================
    LOTES
    ================================================ */
