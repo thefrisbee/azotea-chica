@@ -32,7 +32,8 @@ const translations = {
     hist_quote: "\"Bienvenidos a La Azotea Chica, desde donde hace 150 años se vigilaba el horizonte y hoy se disfruta de las estrellas.\"",
     hist_dato1: "Fundación original",
     hist_dato2: "Construcción del casco actual",
-    hist_dato3: "Partido de Lezama, Pcia. de Buenos Aires",
+    hist_dato3: "Reciclado completo del casco y casa de huéspedes",
+    hist_dato4: "Partido de Lezama, Pcia. de Buenos Aires",
 
     lotes_eyebrow: "Subdivisión",
     lotes_title: "Tres fracciones independientes",
@@ -148,7 +149,8 @@ const translations = {
     hist_quote: "\"Welcome to Azotea Chica, where 150 years ago the horizon was watched, and today the stars are enjoyed.\"",
     hist_dato1: "Original founding",
     hist_dato2: "Current main house built",
-    hist_dato3: "Partido de Lezama, Buenos Aires Province",
+    hist_dato3: "Full renovation of main house and guest house",
+    hist_dato4: "Partido de Lezama, Buenos Aires Province",
 
     lotes_eyebrow: "Subdivision",
     lotes_title: "Three independent parcels",
