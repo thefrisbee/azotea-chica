@@ -831,17 +831,9 @@ h4 {
   background: var(--gris-claro);
 }
 
-.contact-grid {
-  display: grid;
-  gap: 52px;
-}
-
-@media (min-width: 768px) {
-  .contact-grid {
-    grid-template-columns: 3fr 2fr;
-    gap: 72px;
-    align-items: start;
-  }
+.contact-info {
+  max-width: 480px;
+  margin: 0 auto;
 }
 
 .contact-form {

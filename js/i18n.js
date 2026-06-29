@@ -110,7 +110,7 @@ const translations = {
     contact_phone: "Teléfono",
     contact_wa: "Escribir por WhatsApp",
     contact_ubicacion: "Ubicación",
-    contact_ubicacion_desc: "Provincia de Buenos Aires · Ruta Nacional 2 · ~2 hs de CABA",
+    contact_ubicacion_desc: "Partido de Lezama · Provincia de Buenos Aires · ~2 hs de CABA",
 
     footer_legal: "Todos los derechos reservados."
   },
@@ -226,7 +226,7 @@ const translations = {
     contact_phone: "Phone",
     contact_wa: "Message on WhatsApp",
     contact_ubicacion: "Location",
-    contact_ubicacion_desc: "Buenos Aires Province · National Route 2 · ~2 hrs from Buenos Aires",
+    contact_ubicacion_desc: "Partido de Lezama · Buenos Aires Province · ~2 hrs from Buenos Aires",
 
     footer_legal: "All rights reserved."
   }

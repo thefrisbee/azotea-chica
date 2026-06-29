@@ -39,22 +39,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Contact form feedback (for non-Formspree fallback)
-  const form = document.getElementById('contact-form');
-  const notice = document.getElementById('form-notice');
-  if (form) {
-    form.addEventListener('submit', async (e) => {
-      const action = form.getAttribute('action');
-      if (action.includes('XXXXXXXX')) {
-        // Formspree not yet configured — just show notice
-        e.preventDefault();
-        notice.hidden = false;
-        form.reset();
-      }
-      // Otherwise let Formspree handle the POST
-    });
-  }
-
   // Smooth scroll — override for browsers that don't support CSS scroll-behavior
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', e => {
